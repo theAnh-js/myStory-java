@@ -3,13 +3,17 @@ public class MyHero {
     int hp;
     Sword sword;
 
+    public int random(int number) {
+        return (int) (Math.random() * number);
+    }
+
     public void attack() {
         System.out.println(this.name + " attacked!");
         System.out.println(this.name + " gave 100 points of damage on the enemy!");
     }
 
     public void backHome() {
-        System.out.println(this.name + " is going home back now!");
+        System.out.println(this.name + " is back home now!");
     }
 
     public void comeback() {
@@ -18,7 +22,7 @@ public class MyHero {
 
     public void doubleAttack() {
         System.out.println(this.name + " attacked again!");
-        System.out.println(this.name + " gave 2000 points of damage on the enemy!");
+        System.out.println("This time, " + this.name + " gave 2000 points of damage on the enemy!");
     }
 
     public void getFood(String food) {

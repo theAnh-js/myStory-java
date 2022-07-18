@@ -1,11 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Sword s = new Sword();
-        s.name = "Iron Man's Gun";
 
         // 私のヒーローは：
         MyHero myHero = new MyHero();
         myHero.name = "Iron Man";
+
+        Sword s = new Sword();
+
+        // random weapon.
+        int randomWeapon = myHero.random(3);
+        switch (randomWeapon) {
+            case 0:
+                s.name = myHero.name + "'s GUN !";
+                break;
+            case 1:
+                s.name = myHero.name + "'s LASER !";
+                break;
+            case 2:
+                s.name = myHero.name + "'s SWORD !";
+                break;
+            default:
+                s.name = myHero.name + "'s FIRE !";
+        }
         myHero.sword = s;
 
         // 戦い中：
@@ -22,10 +38,12 @@ public class Main {
             System.out.println("Enemy is coming back");
             myHero.comeback();
             myHero.doubleAttack();
-            System.out.println("Enemy is dead");
+            System.out.println("Enemy is really dead!");
+            System.out.println(myHero.name + " is back home");
 
         } else {
             System.out.println("Enemy is dead!!!");
+            System.out.println(myHero.name + " is back home");
         }
 
         // Heroが何を食べたい？
@@ -54,6 +72,7 @@ public class Main {
         System.out.println("人々はヒーローに会いたいのかな？");
         someone.wantTo(true);
         someone.wantTo(false);
+        someone.wantTo(true);
 
         // 人々の子供たちから見たHeroは：(People から継承する)
         People kid = new People();
@@ -61,6 +80,7 @@ public class Main {
         kid.say(myHero.name, "handsome");
         kid.say(myHero.name, "perfect");
         kid.say(myHero.name, "brave");
+        kid.say(myHero.name, "kawaii!");
 
         // 子供たちはHeroに会いたいかな？:(People から継承する)
         System.out.println("子供たちはHeroに会いたいかな？");
