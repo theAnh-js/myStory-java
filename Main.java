@@ -74,22 +74,24 @@ public class Main {
         someone.wantTo(false);
         someone.wantTo(true);
 
+        // 人々はHeroの武器についてどう思っているかな?
+        // someone.feel(s.name, " very Strong!");
+
         // 人々の子供たちから見たHeroは：(People から継承する)
-        People kid = new People();
+        Kids kids = new Kids();
         System.out.println("人々の子供たちはヒーローのことをどう思っているのかな？");
-        kid.say(myHero.name, "handsome");
-        kid.say(myHero.name, "perfect");
-        kid.say(myHero.name, "brave");
-        kid.say(myHero.name, "kawaii!");
+        kids.say(myHero.name, "handsome");
+        kids.say(myHero.name, "perfect");
+        kids.say(myHero.name, "brave");
+        kids.say(myHero.name, "kawaii!");
 
         // 子供たちはHeroに会いたいかな？:(People から継承する)
         System.out.println("子供たちはHeroに会いたいかな？");
-        kid.wantTo(true);
-        kid.wantTo(true);
+        kids.wantTo(true);
+        kids.wantTo(true);
 
         // 人々の子供たちの夢は：（継承しない）
         System.out.println("人々の子供たちの夢は：");
-        Kids kids = new Kids();
         kids.getDreams(myHero.name);
         kids.getDreams("best friend of " + myHero.name);
         kids.getDreams("Spider Man. Because Spider Man is a disciple of Iron Man :):) .");

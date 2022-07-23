@@ -7,9 +7,11 @@ public class MyHero {
         return (int) (Math.random() * number);
     }
 
+    int randomDamageLevel1 = (int) (Math.random() * 1000) + 100;
+
     public void attack() {
         System.out.println(this.name + " attacked!");
-        System.out.println(this.name + " gave 100 points of damage on the enemy!");
+        System.out.println(this.name + " gave " + randomDamageLevel1 + " points of damage on the enemy!");
     }
 
     public void backHome() {
@@ -20,9 +22,12 @@ public class MyHero {
         System.out.println(this.name + " is coming back, too!");
     }
 
+    int randomDamageLevel2 = (int) (Math.random() * 1000) + 1000;
+
     public void doubleAttack() {
         System.out.println(this.name + " attacked again!");
-        System.out.println("This time, " + this.name + " gave 2000 points of damage on the enemy!");
+        System.out
+                .println("This time, " + this.name + " gave " + randomDamageLevel2 + " points of damage on the enemy!");
     }
 
     public void getFood(String food) {
